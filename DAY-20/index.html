@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+     function handleInputField(){
+        console.log("function called");
+     }
+     function handleKeyUp(){
+        console.log("handleKeyUp")
+     }
+     function handleKeydown(){
+     console.log("KeyDown")
+     }
+     function handleFocus(){
+        console.log("Start typing...")
+     }
+        </script>
+    </head>
+    <body>
+        <h1>Input Field Events</h1>
+        <input type="text" onclick="handleInputField()" 
+        onkeyup="handleKeyUp()"
+        onkeydown="handleKeydown()"
+        onfocus="handleFocus()"
+        onblur="handleblur(event)"
+        placeholder="Enter Name">
+
+    </body>
+</html>

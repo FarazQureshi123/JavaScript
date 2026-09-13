@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <h1>Array in js, way to store multiple values in a single variable</h1>
+
+    <script>
+        //  let users = new Array("peter","Sam","Anil");
+        let users = ["peter", "Sam", "Anil"];
+        //  console.log(users[0]);
+        //  console.log(users[1]);
+        //  console.log(users[2]);
+        // for(let i = 0; i <  users.length; i++){
+        //     console.log(users[i]);
+        // }
+
+        delete users[0];
+        console.log(users[0]);
+        console.log(users);
+        users[3] = "apple";
+        console.log(users);
+
+        for (let elements of users) {
+            console.log(elements);
+        }
+
+
+    </script>
+</body>
+
+</html>

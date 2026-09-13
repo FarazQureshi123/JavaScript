@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <h1>Delete Array Element in JavaScript</h1>
+    <span>Delete Array Element</span>
+    <input type="text" onblur="deleteElement(event)" placeholder="Enter position">
+
+    <script>
+
+        let users = ["peter", "Sam", "Alice", "Bob"];
+        //   delete users[0];  //that will delete the the 0 index element but leave an undefined there
+        //   console.log(users);
+
+        //   users.shift(); // it removes the element from the 0 index
+        //   console.log(users);
+        //   users.pop(); // it removes element from the last index
+        //  console.log(users);
+
+        //  users.splice(1,1); // to remove element from the middle 
+        //  console.log(users);
+
+        function deleteElement(event) {
+            let pos = event.target.value;
+            if (pos > users.length - 1) {
+                alert("Invalid position");
+            } else {
+                users.splice(pos, 1);
+                console.log(users);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

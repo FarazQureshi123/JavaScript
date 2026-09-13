@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script>
+        function getInputValue() {
+            let InputValue = document.getElementById("name").value;
+            document.getElementById("heading").innerText = InputValue
+            console.log(InputValue);
+
+        }
+
+        function SetInputValue() {
+            let value = "code step by step";
+            document.getElementById("name").value = value;
+        }
+
+        function removeInputValue() {
+            document.getElementById("name").value = "";
+        }
+
+        function CopyInputFieldValue(){
+            let whovalue = document.getElementById("who").value;
+            document.getElementById("name").value = whovalue;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="heading"></h1>
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="text" id = "who" placeholder="Enter other Name">
+    <br><br>
+    <button onclick="getInputValue()">Get Value</button>
+    <button onclick="SetInputValue()">Set Value</button>
+    <button onclick="removeInputValue()">Remove Value</button>
+    <button onclick="CopyInputfieldValue()">Copy Value</button>
+</body>
+
+</html>

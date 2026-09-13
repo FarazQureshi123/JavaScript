@@ -1,0 +1,41 @@
+<html>
+    <head>
+   
+    </head>
+    <body>
+        <h1>
+    Input Field Style 
+        </h1>
+        <input type="text" id="user" placeholder="Enter your name">
+        <br><br>
+        <input oninput="handleWidth(event)" type="range" step="10" max="300" min="50">
+         <br><br>
+        <input onchange="handleMargin(event)" type="range" step="10" max="300" min="50">
+        <button onclick="handleUpdateStyle()">Update Style</button>
+
+  <script>
+ document.getElementById("user").style.color = "orange";
+
+ function handleUpdateStyle(){
+    let inputElStyle = document.getElementById("user").style
+    inputElStyle.color = "green";
+    inputElStyle.width="250px";
+    inputElStyle.height="50px";
+
+ }
+ function handleWidth(event){
+    console.log(event.target.value);
+    let width = event.target.value+"px"
+    console.log(width);
+
+    let inputElStyle = document.getElementById("user").style.width = width
+ }
+
+ function handleMargin(event){
+    let marginTop = event.target.value + "px";
+    let inputElStyle = document.getElementById("user").style.marginTop = marginTop
+ }
+
+   </script>
+    </body>
+</html>

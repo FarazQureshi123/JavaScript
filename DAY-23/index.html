@@ -1,0 +1,36 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Add Element in Array</h1>
+    <span>Element Position</span>
+    <input type="text" id="position" placeholder="Enter Position">
+    <br><br>
+    <span>Element Value</span>
+    <input type="text" id="value" placeholder="Enter Value">
+    <br>
+    <br>
+    <button onclick="addElement()">Add Element</button>
+    <script>
+        let users = ["anil", "sam", "Sidhu"];
+        console.log(users);
+        users.push("tony");  // push adds an element at the end of an array
+        console.log(users);
+
+        users.unshift("vinay"); // unshift adds an element at the start of an array
+        console.log(users);
+
+        users.splice(1, 0, "user1", "user2");
+        console.log(users);
+
+        function addElement() {
+            let val = document.getElementById('value').value;
+            let pos = document.getElementById('position').value;
+            users.splice(pos, 0, val);
+            console.log(users);
+        }
+    </script>
+</body>
+
+</html>
