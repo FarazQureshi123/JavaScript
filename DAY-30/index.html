@@ -1,0 +1,33 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Array of Objects in Javascript</h1>
+    <ul id="user-list">
+
+    </ul>
+    <script>
+        let users = [
+            { name: "anil", age: 29, email: "anil@test.com" },
+            { name: "sam", age: 30, email: "sam@test.com" },
+            { name: "peter", age: 31, email: "peter@test.com" },
+        ]
+        let list = document.getElementById("user-list");
+        list.innerHTML = "";
+        // for (let user of users) {
+        //     list.innerHTML += "<li>Hello User name is "+user.name+" and User age is "+user.age+"</li>";
+        //     console.log(user.age);
+        // }
+
+        // users.map((user)=>{
+        //    list.innerHTML += "<li>Hello User name is "+user.name+" and User age is "+user.age+"</li>";
+        // })
+
+        users.forEach((user)=>{
+            list.innerHTML += "<li>Hello User name is "+user.name+" and User age is "+user.age+"</li>";
+        })
+    </script>
+</body>
+
+</html>

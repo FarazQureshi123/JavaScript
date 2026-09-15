@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Object Methods in Javascript</h1>
+        <script>
+           
+    let userDetails = {
+        name: "anil",
+        age: 20,
+        city: "gurgaon",
+        greet : function(){
+            return "Hello,"+this.name+" How are you ?"; //this to tell that name is current object property or key
+        },
+        hello : function(from){
+            // return "Hello "+this.name+",How are you? this is "+ from;
+            return this.greet()+" this is"+ from;
+        }
+
+    }
+    // console.log(userDetails.greet());
+    console.log(userDetails.hello("peter"));
+    
+        </script>
+    </body>
+</html>

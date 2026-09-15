@@ -1,0 +1,47 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Object in Javascript</h1>
+    <p>Object in js is a collection of key-value pairs key = property name and value =
+        data(string,number,array,function,object,etc). </p>
+
+    <script>
+        let userDetails = {
+            name: "Anil",
+            age: 25,
+            city: "Delhi",
+            address: {
+                houseNo: 111,
+                sector: 20,
+            }
+        }
+        console.log(userDetails.name);
+        console.log(userDetails.age);
+        console.log(userDetails.city);
+
+
+        //Updation of name
+        userDetails.name = "Anil Sidhu";
+        console.log(userDetails.name);
+
+        //Adding something
+        userDetails.email = "anil@gmail.com"
+
+        console.log(userDetails.email);
+
+        //delete 
+        delete userDetails.city;
+
+        console.log(userDetails.city); //undefined
+
+        for (let key in userDetails) {
+            console.log(userDetails[key])
+        }
+
+        console.log(userDetails)
+    </script>
+</body>
+
+</html>
