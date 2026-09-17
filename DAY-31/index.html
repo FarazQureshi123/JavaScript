@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Function Declaration</title>
+    </head>
+    <body>
+        <h1>Function Declaration</h1>
+        <script>
+            //  
+            //  fruit("Apple"); // here in function declaration we can call the function before declaring it first function calling works then its code executes  
+            // function fruit(item,item2='no other fruit'){ //item2 in this we have put default value
+            //     console.log(item,item2);
+            // }
+
+            // function fruit(item,a,b,c){
+            //     console.log(item); 
+            // }
+            // console.log(fruit.length); // to know how many parameters are in the function
+
+            // console.log(typeof fruit); // the type of function is function
+            // console.log(fruit instanceof Object); // the instance of function is Object
+
+
+            function fruit(...item){ // here through spread operator we can take multiple arguments all without passing any other parameters 
+                console.log(item[4]);
+            }
+            fruit("apple","banana","papaya","orange","grapes");
+
+
+           
+        </script>
+    </body>
+</html>
